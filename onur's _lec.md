@@ -88,7 +88,14 @@
    - `Setup time` is a time before clock edge that input data must be stable
    - `Hold time` is a time after clock edge that data must be stable 
    - 'Aperture time` is a time around clock edge that data must be stable
-
+   - `FlipFlop output timing` 
+       - Contamination delay (clk-q)
+       - Propagation delay (clk-q)
+   - Setup time constraint `Tc > t(pcq) + t(pd) + t (setup) `
+   - Hold time constraint ` t(ccq) + t(cd) > t(hold)`
+   - `Clock Skew` is the difference between two clock edges, it will effect setup time constraint and hold time constraint as;
+       - `Tc > t(pcq) + t(pd) + t (setup) + t(skew)`
+       - ` t(ccq) + t(cd) > t(hold) + t(skew)`
 
 
 
